@@ -1,0 +1,12 @@
+<form action="" [formGroup]="UserForm" (submit)="onSubmit()" method="post">
+  <legend>Plz enter information</legend>
+  <div class="">
+    <input type="email" formControlName="email" id="email" placeholder="Enter email">
+  </div>
+  <div class="">
+    <input type="password" formControlName="password" id="password" placeholder="Enter password">
+  </div>
+  <div class="">
+    <button>Entregar info</button>
+  </div>
+</form>
