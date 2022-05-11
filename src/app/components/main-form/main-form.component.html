@@ -1,12 +1,36 @@
-<form action="" [formGroup]="UserForm" (submit)="onSubmit()" method="post">
-  <legend>Plz enter information</legend>
-  <div class="">
-    <input type="email" formControlName="email" id="email" placeholder="Enter email">
-  </div>
-  <div class="">
-    <input type="password" formControlName="password" id="password" placeholder="Enter password">
-  </div>
-  <div class="">
-    <button>Entregar info</button>
-  </div>
-</form>
+<p>Cambiar de credenciales de usuario a: {{mensaje}}</p>
+
+<span (click)="onChange()">
+  <i class="fas fa-repeat"></i>
+</span>
+
+  <form action="" class="form w-50 d-flex flex-column align-items-center" [formGroup]="EmployeeForm" (submit)="onSubmitEmp()" method="post"  *ngIf="switcher == true; else cliente">
+    <legend>Credenciales de Empleado</legend>
+    <div class="divisor d-flex flex-column align-items-center">
+      <input type="text" class="w-50 " formControlName="code" id="code" placeholder="Ingresa el codigo de empleado">
+    </div>
+    <div class="divisor d-flex flex-column align-items-center">
+      <input type="password" class="w-50" formControlName="password" id="password" placeholder="Ingresa contraseña">
+    </div>
+    <div class="divisor">
+      <button>Entregar info</button>
+    </div>
+  </form>
+
+
+<ng-template #cliente>
+  <form action="" class="form" [formGroup]="UserForm" (submit)="onSubmitCli()" method="post" >
+    <legend>Credenciales de Cliente</legend>
+    <div class="">
+      <input type="email" class="" formControlName="email" id="email" placeholder="Ingresa el correo electronico">
+    </div>
+    <div class="">
+      <input type="password" formControlName="password" id="password" placeholder="Ingresa contraseña">
+    </div>
+    <div class="">
+      <button>Entregar info</button>
+    </div>
+  </form>
+</ng-template>
+
+

@@ -8,7 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { StartnavbarComponent } from './components/startnavbar/startnavbar.component';
 import { MainFormComponent } from './components/main-form/main-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './components/login/login.component'
 
 @NgModule({
   declarations: [

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { library, dom } from '@fortawesome/fontawesome-svg-core'
-import { faBars, faBrush, faList, faUserAstronaut } from '@fortawesome/free-solid-svg-icons'
+import { faList } from '@fortawesome/free-solid-svg-icons'
 @Component({
   selector: 'app-startnavbar',
   templateUrl: './startnavbar.component.html',
