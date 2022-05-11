@@ -30,6 +30,7 @@
   text-align: center;
   left: 260px;
   top: 20px;
+  border-radius: 7px;
 }
 
 .icono:hover{
